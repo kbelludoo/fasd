@@ -97,7 +97,7 @@ namespace AutoBuddy.MainLogics
 
             if (ObjectManager.Get<Obj_AI_Turret>().Count() == 24)
             {
-                if (AutoWalker.p.Gold < 550 && MainMenu.GetMenu("AB").Get<CheckBox>("bot").CurrentValue)
+                if (AutoWalker.p.Gold < 550 && MainMenu.GetMenu("AB").Get<CheckBox>("Bot").CurrentValue)
                 {
                     Vector3 p =
                         ObjectManager.Get<Obj_AI_Turret>()
@@ -150,24 +150,24 @@ namespace AutoBuddy.MainLogics
                 Core.DelayAction(() => Chat.Say("kk"), RandGen.r.Next(1000, 2000));
                 Core.DelayAction(() => SelectLane2(Lane.Top), RandGen.r.Next(2500, 4000));
             }
-            if (args.Message.Contains("go mid please."))
+            if (args.Message.Contains("vai mid."))
             {
                 Core.DelayAction(() => Chat.Say("ok"), RandGen.r.Next(1000, 2000));
                 Core.DelayAction(() => SelectLane2(Lane.Mid), RandGen.r.Next(2500, 4000));
             }
-            if (args.Message.Contains("go bot please."))
+            if (args.Message.Contains("vai bot."))
             {
                 Core.DelayAction(() => Chat.Say("k"), RandGen.r.Next(1000, 2000));
                 Core.DelayAction(() => SelectLane2(Lane.Bot), RandGen.r.Next(2500, 4000));
             }
-            if (args.Message.Contains("go where you want."))
+            if (args.Message.Contains("sai porra"))
             {
-                Core.DelayAction(() => Chat.Say("yes sir"), RandGen.r.Next(1000, 2000));
+                Core.DelayAction(() => Chat.Say("fala assim com a sua mãe"), RandGen.r.Next(1000, 2000));
                 Core.DelayAction(SelectLane, RandGen.r.Next(2500, 4000));
             }
-            if (args.Message.Contains("Thank you"))
+            if (args.Message.Contains("obrigado"))
             {
-                Core.DelayAction(() => Chat.Say("np"), RandGen.r.Next(1000, 2000));
+                Core.DelayAction(() => Chat.Say("normal"), RandGen.r.Next(1000, 2000));
                 Core.DelayAction(SelectLane, RandGen.r.Next(2500, 4000));
             }
 
