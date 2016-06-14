@@ -106,7 +106,7 @@ namespace AutoBuddy.MainLogics
 
                     Core.DelayAction(() => SafeFunctions.Ping(PingCategory.OnMyWay, p.Randomized()),
                         RandGen.r.Next(1500, 3000));
-                    Core.DelayAction(() => SafeFunctions.SayChat("todos mute,pois odeio ficar conversando no jogo. E nao estou afim de discutir com ngn, nao me levem a mal"), RandGen.r.Next(200, 1000));
+                    Core.DelayAction(() => SafeFunctions.SayChat("bot"), RandGen.r.Next(200, 1000));
                     AutoWalker.SetMode(Orbwalker.ActiveModes.Combo);
                     AutoWalker.WalkTo(p.Extend(AutoWalker.MyNexus, 200 + RandGen.r.NextFloat(0, 100)).To3DWorld().Randomized());
                 }
