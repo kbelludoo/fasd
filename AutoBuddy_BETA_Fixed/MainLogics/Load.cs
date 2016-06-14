@@ -105,7 +105,7 @@ namespace AutoBuddy.MainLogics
                             .Position;
 
                     Core.DelayAction(() => SafeFunctions.Ping(PingCategory.OnMyWay, p.Randomized()),
-                        RandGen.r.Next(1500, 3000));
+                        RandGen.r.Next(2500, 4000));
                     Core.DelayAction(() => SafeFunctions.SayChat("todos mute,pois odeio ficar conversando no jogo. E nao estou afim de discutir com ngn, nao me levem a mal"), RandGen.r.Next(200, 1000));
                     AutoWalker.SetMode(Orbwalker.ActiveModes.Combo);
                     AutoWalker.WalkTo(p.Extend(AutoWalker.MyNexus, 200 + RandGen.r.NextFloat(0, 100)).To3DWorld().Randomized());
@@ -139,10 +139,10 @@ namespace AutoBuddy.MainLogics
         {
 
             if (!args.Message.StartsWith("<font color=\"#40c1ff\">Challenjour Ryze")) return;
-            if (args.Message.Contains("have fun"))
-                Core.DelayAction(() => Chat.Say("gl hf"), RandGen.r.Next(2000, 4000));
-            if (args.Message.Contains("hello"))
-                Core.DelayAction(() => Chat.Say("hi Christian"), RandGen.r.Next(2000, 4000));
+            if (args.Message.Contains("bom jogo"))
+                Core.DelayAction(() => Chat.Say("espero"), RandGen.r.Next(2000, 4000));
+            if (args.Message.Contains("ashe"))
+                Core.DelayAction(() => Chat.Say("nao falo nada"), RandGen.r.Next(2000, 4000));
             if (args.Message.Contains("Which")||args.Message.Contains("Whats"))
                 Core.DelayAction(() => Chat.Say(Assembly.GetExecutingAssembly().GetName().Version.Revision.ToString()), RandGen.r.Next(2000, 4000));
             if (args.Message.Contains("go top please."))
