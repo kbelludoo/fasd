@@ -101,11 +101,11 @@ namespace AutoBuddy.MainLogics
                 {
                     Vector3 p =
                         ObjectManager.Get<Obj_AI_Turret>()
-                            .First(tur => tur.IsAlly && tur.Name.EndsWith("C_05_A"))
+                            .First(tur => tur.IsAlly && tur.Name.EndsWith("R_03_A"))
                             .Position;
 
                     Core.DelayAction(() => SafeFunctions.Ping(PingCategory.OnMyWay, p.Randomized()),
-                        RandGen.r.Next(2500, 4000));
+                        RandGen.r.Next(1500, 3000));
                     Core.DelayAction(() => SafeFunctions.SayChat("todos mute,pois odeio ficar conversando no jogo. E nao estou afim de discutir com ngn, nao me levem a mal"), RandGen.r.Next(200, 1000));
                     AutoWalker.SetMode(Orbwalker.ActiveModes.Combo);
                     AutoWalker.WalkTo(p.Extend(AutoWalker.MyNexus, 200 + RandGen.r.NextFloat(0, 100)).To3DWorld().Randomized());
