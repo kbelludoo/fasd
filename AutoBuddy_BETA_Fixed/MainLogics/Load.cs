@@ -97,7 +97,7 @@ namespace AutoBuddy.MainLogics
 
             if (ObjectManager.Get<Obj_AI_Turret>().Count() == 24)
             {
-                if (AutoWalker.p.Gold < 550 && MainMenu.GetMenu("AB").Get<CheckBox>().CurrentValue)
+                if (AutoWalker.p.Gold < 550 && MainMenu.GetMenu("AB").Get<CheckBox>("SelectLane2(Lane.Bot)").CurrentValue)
                 {
                     Vector3 p =
                         ObjectManager.Get<Obj_AI_Turret>()
@@ -106,7 +106,7 @@ namespace AutoBuddy.MainLogics
 
                     Core.DelayAction(() => SafeFunctions.Ping(PingCategory.OnMyWay, p.Randomized()),
                         RandGen.r.Next(1500, 3000));
-                    Core.DelayAction(() => SafeFunctions.SayChat("bot"), RandGen.r.Next(200, 1000));
+                    Core.DelayAction(() => SafeFunctions.SayChat("Bot"), RandGen.r.Next(200, 1000));
                     AutoWalker.SetMode(Orbwalker.ActiveModes.Combo);
                     AutoWalker.WalkTo(p.Extend(AutoWalker.MyNexus, 200 + RandGen.r.NextFloat(0, 100)).To3DWorld().Randomized());
                 }
